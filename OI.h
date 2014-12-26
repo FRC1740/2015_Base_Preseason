@@ -5,12 +5,16 @@
 
 // currently set up for 2 joystick tank, add more features later!
 
+
 class OI {
 private:
-	Joystick *left_drive_joystick;
-	Joystick *right_drive_joystick;
+
 public:
 	OI();
+	Joystick *left_drive_joystick;
+	Joystick *right_drive_joystick;
+	Joystick *three_axis_joystick;
+
 };
 
 #endif

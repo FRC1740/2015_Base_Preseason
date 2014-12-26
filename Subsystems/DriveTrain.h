@@ -18,6 +18,7 @@ public:
 	void StandardTankDrive(float, float);
 	void MecanumTankDrive(float, float, float, float);
 	void ThreeAxisDrive(float, float, float);
+	void Stop();
 };
 
 #endif

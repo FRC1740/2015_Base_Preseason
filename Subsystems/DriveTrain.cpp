@@ -12,7 +12,7 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain") {
     
 void DriveTrain::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
-	//SetDefaultCommand(new MySpecialCommand());
+//	SetDefaultCommand(new MySpecialCommand());
 	//Create all sorts of drive methods and then set the default command accordingly
 
 }
@@ -40,6 +40,13 @@ void DriveTrain::ThreeAxisDrive(float input_y, float input_x, float input_twist)
 	front_left_motor->Set(-1 * (this->Square(input_y) - this->Square(input_x) - this->Square(input_twist)));
 	rear_left_motor->Set(-1 * (this->Square(input_y) + this->Square(input_x) - this->Square(input_twist)));
 }
+void DriveTrain::Stop(){
+	front_right_motor->Set(0);
+	front_left_motor->Set(0);
+	rear_right_motor->Set(0);
+	rear_left_motor->Set(0);
+}
+		
 
 
 
