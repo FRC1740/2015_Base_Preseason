@@ -11,11 +11,13 @@ private:
 	Victor *front_left_motor;
 	Victor *rear_right_motor;
 	Victor *rear_left_motor;
+	float Square(float);
 public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void StandardTankDrive(float, float);
 	void MecanumTankDrive(float, float, float, float);
+	void ThreeAxisDrive(float, float, float);
 };
 
 #endif
