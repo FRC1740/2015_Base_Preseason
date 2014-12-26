@@ -1,0 +1,7 @@
+*.py[cod]
+
+# C extensions
+*.o
+*.d
+*.out
+*.c

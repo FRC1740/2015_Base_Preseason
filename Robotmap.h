@@ -8,15 +8,10 @@
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
- 
-// For example to map the left and right motors, you could define the
-// following variables to use with your drivetrain subsystem.
-// #define LEFTMOTOR 1
-// #define RIGHTMOTOR 2
-
-// If you are using multiple modules, make sure to define both the port
-// number and the module. For example you with a rangefinder:
-// #define RANGE_FINDER_PORT 1
-// #define RANGE_FINDER_MODULE 1
+ // drivetrain motors go here, currently set up to assume 4 motor
+#define front_right_motor_port 1
+#define front_left_motor_port 2
+#define rear_right_motor_port 3
+#define rear_left_motor_port 4
 
 #endif
