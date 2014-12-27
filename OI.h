@@ -11,9 +11,9 @@ private:
 
 public:
 	OI();
-	Joystick *left_drive_joystick;
-	Joystick *right_drive_joystick;
-	Joystick *three_axis_joystick;
+	Joystick *joystick_1;
+	Joystick *joystick_2;
+	Joystick *joystick_3;
 
 };
 

@@ -8,19 +8,19 @@ TeleopDrive::TeleopDrive() {
 // Called just before this Command runs the first time
 void TeleopDrive::Initialize() {
 	// we would need to read the drive mode from the smart dashboard
-	int DriveMode = StandardTankMode;
+	DriveMode = StandardTankMode;
 }
 
 // Called repeatedly when this Command is scheduled to run
 void TeleopDrive::Execute() {
 	if (DriveMode == StandardTankMode){
-		drivetrain->StandardTankDrive(oi->left_drive_joystick->GetX(), oi->right_drive_joystick->GetX());
+		drivetrain->StandardTankDrive(oi->joystick_1->GetX(), oi->joystick_2->GetX());
 	}
 	else if (DriveMode == MecanumTankMode){
-		drivetrain->MecanumTankDrive(oi->left_drive_joystick->GetX(), oi->left_drive_joystick->GetY(), oi->right_drive_joystick->GetX(), oi->right_drive_joystick->GetY());
+		drivetrain->MecanumTankDrive(oi->joystick_1->GetX(), oi->joystick_1->GetY(), oi->joystick_2->GetX(), oi->joystick_2->GetY());
 	}
 	else if (DriveMode == ThreeAxisMode){
-		drivetrain->ThreeAxisDrive(oi->three_axis_joystick->GetY(), oi->three_axis_joystick->GetX(), oi->three_axis_joystick->GetTwist());
+		drivetrain->ThreeAxisDrive(oi->joystick_3->GetY(), oi->joystick_3->GetX(), oi->joystick_3->GetTwist());
 	}
 }
 
