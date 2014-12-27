@@ -1,6 +1,6 @@
 #include "CommandBase.h"
 #include "Subsystems/DriveTrain.h"
-//#include "Commands/Scheduler.h" this file does not appear to exist, so i commented out the include, -ktk
+#include "Commands/Scheduler.h"
 
 CommandBase::CommandBase(const char *name) : Command(name) {
 }
