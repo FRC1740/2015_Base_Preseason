@@ -1,8 +1,7 @@
 #include "TeleopDrive.h"
 
 TeleopDrive::TeleopDrive() {
-	// Use requires() here to declare subsystem dependencies
-	Requires(drivetrain);
+	Requires(drivetrain); // lowercase drivetrain since that is how it is declared in CommandBase.h
 }
 
 // Called just before this Command runs the first time

@@ -24,7 +24,7 @@ private:
 	virtual void RobotInit() {
 		CommandBase::init();
 //		autonomousCommand = new ExampleCommand();
-		TeleopCommand = new TeleopDrive();
+//		TeleopCommand = new TeleopDrive();
 		lw = LiveWindow::GetInstance();
 	}
 	

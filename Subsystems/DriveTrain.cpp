@@ -1,21 +1,19 @@
 #include "DriveTrain.h"
 #include "../Robotmap.h"
+#include "../Commands/TeleopDrive.h"
 #include "math.h"
 
-DriveTrain::DriveTrain() : Subsystem("DriveTrain") {
+DriveTrain::DriveTrain() : Subsystem("DriveTrain") { // remember to update this to the correct type of motor controller
 	front_right_motor = new Victor(front_right_motor_port);
 	front_left_motor = new Victor(front_left_motor_port);
 	rear_right_motor = new Victor(rear_right_motor_port);
 	rear_left_motor = new Victor(rear_left_motor_port);
-	
 }
     
 void DriveTrain::InitDefaultCommand() {
-	// Set the default command for a subsystem here.
-//	SetDefaultCommand(new MySpecialCommand());
-	//Create all sorts of drive methods and then set the default command accordingly
-
+	SetDefaultCommand(new TeleopDrive());
 }
+
 // NOTE: STANDARD: high grip wheels
 void DriveTrain::StandardTankDrive(float input_left, float input_right){
 	front_left_motor->Set(input_left);  // note in the tutorial video he uses SetSpeed(float) instead, not sure what the difference is
